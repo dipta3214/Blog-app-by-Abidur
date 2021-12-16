@@ -19,5 +19,5 @@
 [Trello](https://trello.com/b/BITt9mHP/blog-by-abidur)
 
 ## Creator's Social Media sites
-[LinkedIn](https://www.linkedin.com/in/abidurrahmandipta/)
-[GitHub](https://github.com/dipta3214)
+- [LinkedIn](https://www.linkedin.com/in/abidurrahmandipta/)
+- [GitHub](https://github.com/dipta3214)
