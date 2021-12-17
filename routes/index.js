@@ -14,4 +14,6 @@ router.put('/articles/:id', controllers.updateArticle)
 
 router.delete('/articles/:id', controllers.deleteArticle)
 
+router.get('/users', controllers.getAllUsers)
+
 module.exports = router;
