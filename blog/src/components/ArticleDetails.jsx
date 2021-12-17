@@ -16,9 +16,8 @@ const ArticleDetails = (props) => {
     }, [])
 
     return (
-        <div>
-            <h1>hi</h1>
-            <h1>{selectedArticle.name}</h1>
+        <div className="article-details">
+            <h1>{selectedArticle.title}</h1>
             <img src={selectedArticle.image} alt="bleh" />
             <p>{selectedArticle.content}</p>
             <h6>{selectedArticle.category}</h6>

@@ -49,3 +49,7 @@
   grid-template-rows: repeat(3, 1fr);
   grid-gap: 10vh;
 }
+
+.article-details img{
+  width: 90%;
+}
