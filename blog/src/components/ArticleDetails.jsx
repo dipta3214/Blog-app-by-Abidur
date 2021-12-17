@@ -8,35 +8,17 @@ const ArticleDetails = (props) => {
     const getArticleDetails = async () => {
         const res = await axios.get(`http://localhost:3001/api/articles/${props.match.params.articleId}`)
         setSelectedArticle(res.data.article)
-        setNewPost(res.data.article)
         // console.log(res)
+    }
+
+    const deleteArticle = () => {
+        axios.delete(`http://localhost:3001/api/articles/${props.match.params.articleId}`)
     }
 
     useEffect(() => {
         getArticleDetails()
     }, [])
 
-
-
-    const [newPost, setNewPost] = useState({})
-
-    console.log(newPost)
-
-    const handleChange = (e) => {
-        const newestPost = { ...newPost }
-        newestPost[e.target.id] = e.target.value
-        setNewPost(newestPost)
-    }
-
-    const submitForm = (e) => {
-        e.preventDefault()
-        axios.put(`http://localhost:3001/api/articles/${props.match.params.articleId}/update`, {
-            title: newPost.title,
-            image: newPost.image,
-            content: newPost.content,
-            category: newPost.category
-        })
-    }
 
     return (
         <div>
@@ -47,14 +29,9 @@ const ArticleDetails = (props) => {
                 <p>{selectedArticle.content}</p>
                 <h6>{selectedArticle.category}</h6>
             </div>
-            <br /><br /><br /><br />
-            <form onSubmit={(e) => submitForm(e)}>
-                <input type="text" value={newPost.title} id="title" placeholder="Enter Your title" onChange={(e) => handleChange(e)} required />
-                <input type="text" value={newPost.image} id="image" placeholder="Enter Image URL" onChange={(e) => handleChange(e)} />
-                <input type="textarea" value={newPost.content} id="content" placeholder="Enter Your Content" onChange={(e) => handleChange(e)} required />
-                <input type="text" value={newPost.category} id="category" placeholder="Enter Category Name" onChange={(e) => handleChange(e)} required />
-                <button type="submit">Submit</button>
-            </form>
+            <br /><br />
+            <button onClick={deleteArticle}>Delete</button>
+            <br /><br />
         </div>
     )
 }

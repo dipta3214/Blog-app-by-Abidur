@@ -30,7 +30,7 @@ const UpdatePost = (props) => {
 
     const submitForm = (e) => {
         e.preventDefault()
-        axios.put(`http://localhost:3001/api/articles/${props.match.params.articleId}/update`, {
+        axios.put(`http://localhost:3001/api/articles/${props.match.params.articleId}`, {
             title: newPost.title,
             image: newPost.image,
             content: newPost.content,
