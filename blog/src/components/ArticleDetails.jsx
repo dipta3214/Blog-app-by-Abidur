@@ -19,6 +19,7 @@ const ArticleDetails = (props) => {
         <div className="article-details">
             <h1>{selectedArticle.title}</h1>
             <img src={selectedArticle.image} alt="bleh" />
+            <h6>{selectedArticle.crea}</h6>
             <p>{selectedArticle.content}</p>
             <h6>{selectedArticle.category}</h6>
         </div>

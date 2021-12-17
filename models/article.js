@@ -9,7 +9,7 @@ const Article = new Schema(
         category: {type: String, required: true},
         user_id: {type: Schema.Types.ObjectId, ref: 'users'}
     },
-    { timeseries: true }
+    { timestamps: true }
 )
 
 module.exports = mongoose.model('articles', Article)

@@ -1,4 +1,5 @@
 const Article = require('../models/article');
+const User = require('../models/user');
 
 const createArticle = async (req, res) => {
     try {
@@ -16,6 +17,15 @@ const getAllArticles = async (req, res) => {
     try {
         const articles = await Article.find()
         return res.status(200).json({ articles })
+    } catch (error) {
+        return res.status(500).send(error.message);
+    }
+}
+
+const getAllUsers = async (req, res) => {
+    try {
+        const users = await User.find()
+        return res.status(200).json({ users })
     } catch (error) {
         return res.status(500).send(error.message);
     }
@@ -73,5 +83,6 @@ module.exports = {
     getAllArticles,
     getArticleById,
     updateArticle,
-    deleteArticle
+    deleteArticle,
+    getAllUsers
 }
