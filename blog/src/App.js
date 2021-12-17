@@ -5,6 +5,8 @@ import Header from './components/Header';
 import Home from './components/Home';
 import ArticleDetails from './components/ArticleDetails';
 import CreatePost from './pages/CreatePost';
+import UpdatePost from './components/UpdatePost';
+
 
 function App() {
   return (
@@ -13,7 +15,8 @@ function App() {
       <main>
         <Switch>
           <Route exact path='/' component={Home}/>
-          <Route path='/articles/:articleId' component={ArticleDetails} />
+          <Route exact path='/articles/:articleId' component={ArticleDetails} />
+          <Route path='/articles/update/:articleId' component={UpdatePost} />
           <Route path='/createpost' component={CreatePost}/>
         </Switch>
       </main>

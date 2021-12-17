@@ -1,15 +1,15 @@
-import axios from "axios";
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 
-const ArticleDetails = (props) => {
+const UpdatePost = (props) => {
 
     const [selectedArticle, setSelectedArticle] = useState({})
 
     const getArticleDetails = async () => {
-        const res = await axios.get(`http://localhost:3001/api/articles/${props.match.params.articleId}`)
+        const res = await axios.get(`http://localhost:3001/api/articles/update/${props.match.params.articleId}`)
         setSelectedArticle(res.data.article)
         setNewPost(res.data.article)
-        // console.log(res)
+        console.log(res)
     }
 
     useEffect(() => {
@@ -40,14 +40,6 @@ const ArticleDetails = (props) => {
 
     return (
         <div>
-            <div className="article-details" onClick={() => props.history.push(`/articles/update/${selectedArticle._id}`)}>
-                <h1>{selectedArticle.title}</h1>
-                <img src={selectedArticle.image} alt="bleh" />
-                <h6>{selectedArticle.createdAt}</h6>
-                <p>{selectedArticle.content}</p>
-                <h6>{selectedArticle.category}</h6>
-            </div>
-            <br /><br /><br /><br />
             <form onSubmit={(e) => submitForm(e)}>
                 <input type="text" value={newPost.title} id="title" placeholder="Enter Your title" onChange={(e) => handleChange(e)} required />
                 <input type="text" value={newPost.image} id="image" placeholder="Enter Image URL" onChange={(e) => handleChange(e)} />
@@ -59,4 +51,4 @@ const ArticleDetails = (props) => {
     )
 }
 
-export default ArticleDetails
+export default UpdatePost

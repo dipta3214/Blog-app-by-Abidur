@@ -10,7 +10,9 @@ router.get('/articles', controllers.getAllArticles)
 
 router.get('/articles/:id', controllers.getArticleById)
 
-router.put('/articles/:id', controllers.updateArticle)
+router.get('/articles/update/:id', controllers.getArticleById)
+
+router.put('/articles/:id/update', controllers.updateArticle)
 
 router.delete('/articles/:id', controllers.deleteArticle)
 
