@@ -6,6 +6,7 @@ import Home from './components/Home';
 import ArticleDetails from './components/ArticleDetails';
 import CreatePost from './pages/CreatePost';
 import UpdatePost from './components/UpdatePost';
+import SuccesfulCreation from './pages/SuccessfulCreation';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route exact path='/articles/:articleId' component={ArticleDetails} />
           <Route path='/articles/update/:articleId' component={UpdatePost} />
           <Route path='/createpost' component={CreatePost}/>
+          <Route path='/createpost/succesful' component={SuccesfulCreation} />
         </Switch>
       </main>
     </div>
