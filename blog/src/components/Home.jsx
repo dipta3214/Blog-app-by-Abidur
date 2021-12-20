@@ -23,7 +23,9 @@ const Home = (props) => {
             {
                 articles.map((article) => {
                     return (
-                        <ArticleCard key={article._id} image={article.image} title={article.title} onClick={() => props.history.push(`articles/${article._id}`)} />
+                        <div className="articleCard">
+                            <ArticleCard key={article._id} image={article.image} title={article.title} onClick={() => props.history.push(`articles/${article._id}`)} />
+                        </div>
                     )
                 })
             }

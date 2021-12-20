@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom'
 
 const SideBar = () => {
     return (
-        <div>
+        <div className="SideBar">
             <div className="sidebar">
-                <Link to='/entertainment'>Entertainment</Link>
-                <Link to='/sports'>Sports</Link>
-                <Link to='/tech'>Tech</Link>
+                <Link to='/entertainment' style={{ color: 'white', textDecoration: 'none', padding: '2vh' }}>Entertainment</Link>
+                <Link to='/sports' style={{ color: 'white', textDecoration: 'none', padding: '2vh' }}>Sports</Link>
+                <Link to='/tech' style={{ color: 'white', textDecoration: 'none', padding: '2vh' }}>Tech</Link>
             </div>
         </div>
     )

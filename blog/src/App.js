@@ -16,13 +16,15 @@ function App() {
       <Header />
       <main className='main'>
         <SideBar />
-        <Switch>
-          <Route exact path='/' component={Home}/>
-          <Route exact path='/articles/:articleId' component={ArticleDetails} />
-          <Route path='/articles/update/:articleId' component={UpdatePost} />
-          <Route path='/createpost' component={CreatePost}/>
-          <Route path='/createpost/succesful' component={SuccesfulCreation} />
-        </Switch>
+        <div className='content'>
+          <Switch >
+            <Route exact path='/' component={Home}/>
+            <Route exact path='/articles/:articleId' component={ArticleDetails} />
+            <Route path='/articles/update/:articleId' component={UpdatePost} />
+            <Route path='/createpost' component={CreatePost}/>
+            <Route path='/createpost/succesful' component={SuccesfulCreation} />
+          </Switch>
+        </div>
       </main>
     </div>
   );
