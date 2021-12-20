@@ -7,13 +7,15 @@ import ArticleDetails from './components/ArticleDetails';
 import CreatePost from './pages/CreatePost';
 import UpdatePost from './components/UpdatePost';
 import SuccesfulCreation from './pages/SuccessfulCreation';
+import SideBar from './components/SideBar';
 
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <main>
+      <main className='main'>
+        <SideBar />
         <Switch>
           <Route exact path='/' component={Home}/>
           <Route exact path='/articles/:articleId' component={ArticleDetails} />
