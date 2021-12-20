@@ -8,6 +8,10 @@ import CreatePost from './pages/CreatePost';
 import UpdatePost from './components/UpdatePost';
 import SuccesfulCreation from './pages/SuccessfulCreation';
 import SideBar from './components/SideBar';
+import Entertainment from './pages/Entertainment';
+import Sports from './pages/Sports';
+import Tech from './pages/Tech';
+import Investing from './pages/Investing';
 
 
 function App() {
@@ -23,6 +27,10 @@ function App() {
             <Route path='/articles/update/:articleId' component={UpdatePost} />
             <Route path='/createpost' component={CreatePost}/>
             <Route path='/createpost/succesful' component={SuccesfulCreation} />
+            <Route path='/entertainment' component={Entertainment} />
+            <Route path='/sports' component={Sports} />
+            <Route path='/tech' component={Tech} />
+            <Route path='/investing' component={Investing} />
           </Switch>
         </div>
       </main>

@@ -50,8 +50,14 @@
   grid-gap: 10vh;
 }
 
-.article-details img{
+.details-image{
   width: 90%;
+  height: 70vh;
+}
+
+.edit-delete{
+  display: flex;
+  justify-content: flex-end;
 }
 
 .main{
@@ -91,11 +97,12 @@
 }
 
 .articleCard{
-  border: 1px solid white;
+  border: 1px solid #b59207;
   border-radius: 8px;
   padding: 1vh;
   text-align: center;
   color: white;
+  background-color: orange;
 }
 
 
