@@ -50,3 +50,27 @@
   width: 90%;
 }
 
+.main{
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+}
+
+.sidebar{
+  display: flex;
+  flex-direction: column;
+  background-color: #1c0b40;
+  height: 100%;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  height: 6vh;
+  background-color: #1c0b40;
+  width: 100%;
+}
+
+.navbar div{
+  display: flex;
+  align-items: center;
+}
