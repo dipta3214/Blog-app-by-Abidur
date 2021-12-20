@@ -21,8 +21,8 @@ const Sports = (props) => {
                 articles.map((article) => {
                     if (article.category === 'sports') {
                         return (
-                            <div className="articleCard">
-                                <ArticleCard key={article._id} image={article.image} title={article.title} onClick={() => props.history.push(`articles/${article._id}`)} />
+                            <div className="articleCard" key={article._id} >
+                                <ArticleCard image={article.image} title={article.title} onClick={() => props.history.push(`articles/${article._id}`)} />
                             </div>
                         )
                     }

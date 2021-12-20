@@ -1,20 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import SuccesfulCreation from "./SuccessfulCreation";
 
 const CreatePost = (props) => {
 
+    const [user, setUser] = useState([])
+
+    useEffect(() => {
+        const getUser = async () => {
+            const res = await axios.get('http://localhost:3001/api/users')
+            setUser(res.data.users[0])
+        }
+        getUser()
+    }, [])
+
     const [newPost, setNewPost] = useState({
         title: ``,
         content: ``,
         image: ``,
-        category: ``
+        category: ``,
+        author_name: user.author
     })
 
     const handleChange = (e) => {
         const newestPost = { ...newPost }
         newestPost[e.target.id] = e.target.value
         setNewPost(newestPost)
+        console.log(newPost)
     }
 
     const submitForm = (e) => {
@@ -23,7 +35,8 @@ const CreatePost = (props) => {
             title: newPost.title,
             content: newPost.content,
             image: newPost.image,
-            category: newPost.category
+            category: newPost.category,
+            author_name: user.author
         })
 
         if (newPost.title !== '' && newPost.content !== '' && newPost.image !== '' && newPost.category !== '') {

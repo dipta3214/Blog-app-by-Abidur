@@ -7,7 +7,8 @@ const Article = new Schema(
         content: {type: String , required: true},
         image: {type: String},
         category: {type: String, required: true},
-        user_id: {type: Schema.Types.ObjectId, ref: 'users'}
+        user_id: {type: Schema.Types.ObjectId, ref: 'users'},
+        author_name: {type: String, ref: 'users'}
     },
     { timestamps: true }
 )

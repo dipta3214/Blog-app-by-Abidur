@@ -32,6 +32,7 @@ const ArticleDetails = (props) => {
                 </div>
                 <h1 style={{ fontFamily: '"Trebuchet MS", Helvetica, sans-serif', color: 'white' }}>{selectedArticle.title}</h1>
                 <img src={selectedArticle.image} alt="bleh" className="details-image" />
+                <h2>Author: {selectedArticle.author_name}</h2>
                 <h6>{selectedArticle.createdAt}</h6>
                 <h4 style={{ color: 'white' }}>Category: {selectedArticle.category}</h4>
                 <p style={{ color: 'white', fontSize: '4vh' }}>{selectedArticle.content}</p>

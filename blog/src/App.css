@@ -175,3 +175,10 @@
   font-family: Tahoma, Verdana, sans-serif;
 }
 
+.all-nav :hover{
+  background-color: palegoldenrod;
+  color: black;
+}
+
+
+
