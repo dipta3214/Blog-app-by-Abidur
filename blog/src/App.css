@@ -111,7 +111,7 @@
 .form-div{
   background-color: white;
   width: 90vh;
-  height: 60vh;
+  height: 70vh;
   padding: 5vh;
   border-radius: 1vh;
   display: flex;
@@ -127,6 +127,10 @@
   border: 1px solid black;
 }
 
+.form label{
+  margin-left: 2vh;
+}
+
 .form textarea{
   padding: 3vh;
   width: 80vh;
@@ -139,8 +143,13 @@
   padding: 1vh;
   margin: 2vh;
   width: 10vh;
-  height: 8vh;
+  height: 15vh;
   background-color: orange;
   border: 1px solid #b59207;
   border-radius: 1vh;
 }
+
+.form h2{
+  text-align: center;
+}
+

@@ -39,14 +39,21 @@ const UpdatePost = (props) => {
     }
 
     return (
-        <div>
-            <form onSubmit={(e) => submitForm(e)}>
-                <input type="text" value={newPost.title} id="title" placeholder="Enter Your title" onChange={(e) => handleChange(e)} required />
-                <input type="text" value={newPost.image} id="image" placeholder="Enter Image URL" onChange={(e) => handleChange(e)} />
-                <input type="textarea" value={newPost.content} id="content" placeholder="Enter Your Content" onChange={(e) => handleChange(e)} required />
-                <input type="text" value={newPost.category} id="category" placeholder="Enter Category Name" onChange={(e) => handleChange(e)} required />
-                <button type="submit">Submit</button>
-            </form>
+        <div className="form-div-div">
+            <div className="form-div">
+                <form onSubmit={(e) => submitForm(e)} className="form">
+                    <h2>Update Post:</h2>
+                    <label for='title'>Title:</label>
+                    <input type="text" value={newPost.title} id="title" placeholder="Enter Your title" onChange={(e) => handleChange(e)} required />
+                    <label for='image'>Image(Url Only):</label>
+                    <input type="text" value={newPost.image} id="image" placeholder="Enter Image URL" onChange={(e) => handleChange(e)} required />
+                    <label for='content'>Content:</label>
+                    <textarea type="text" value={newPost.content} id="content" placeholder="Enter Your Content" onChange={(e) => handleChange(e)} required />
+                    <label for='category'>Category:</label>
+                    <input type="text" value={newPost.category} id="category" placeholder="Enter Category Name" onChange={(e) => handleChange(e)} required />
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
         </div>
     )
 }
