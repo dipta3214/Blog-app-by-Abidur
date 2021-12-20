@@ -3,7 +3,7 @@ import React from "react";
 const ArticleCard = (props) => {
     return (
         <div className="home-contents" onClick={props.onClick}>
-            <div>
+            <div className="post-content">
                 <img src={props.image} alt="poster" />
                 <h3>{props.title}</h3>
             </div>

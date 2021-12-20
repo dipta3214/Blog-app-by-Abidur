@@ -10,7 +10,7 @@ const Header = () => {
                 <Link to='contact' style={{ color: 'white', textDecoration: 'none', padding: '2vh' }}>Contact Us</Link>
             </div>
             <div>
-                <Link to='/createpost' style={{ color: 'white', textDecoration: 'none', padding: '2vh' }}>New Post</Link>
+                <Link to='/createpost' style={{ color: 'white', textDecoration: 'none', padding: '2vh' }}><button className="btn-new-post">New Post</button></Link>
             </div>
         </div>
     )

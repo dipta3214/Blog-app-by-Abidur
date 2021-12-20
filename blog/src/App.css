@@ -38,14 +38,14 @@
 }
 
 .home-contents div img{
-  height: 200px;
-  width: 250px;
+  height: 28vh;
+  width: 50vh;
 }
 
 .home{
   width: 5vh;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-gap: 10vh;
 }
@@ -68,7 +68,7 @@
 .navbar{
   display: flex;
   justify-content: space-between;
-  height: 6vh;
+  height: 8vh;
   background-color: #1c0b40;
   width: 100%;
 }
@@ -97,6 +97,7 @@
   text-align: center;
   color: white;
 }
+
 
 .form-div-div{
   height: 90vh;
@@ -155,5 +156,15 @@
 
 .form h2{
   text-align: center;
+}
+
+.btn-new-post{
+  padding: 1vh;
+  width: 15vh;
+  height: 7vh;
+  background-color: orange;
+  border: 1px solid #b59207;
+  border-radius: 1vh;
+  font-family: Tahoma, Verdana, sans-serif;
 }
 

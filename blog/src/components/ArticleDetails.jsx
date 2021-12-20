@@ -22,16 +22,17 @@ const ArticleDetails = (props) => {
 
     return (
         <div>
-            <div className="article-details" onClick={() => props.history.push(`/articles/update/${selectedArticle._id}`)}>
-                <h1>{selectedArticle.title}</h1>
+            <div className="article-details">
+                <h1 style={{ fontFamily: '"Trebuchet MS", Helvetica, sans-serif', color: 'white' }}>{selectedArticle.title}</h1>
                 <img src={selectedArticle.image} alt="bleh" />
+                <div>
+                    <button onClick={() => props.history.push(`/articles/update/${selectedArticle._id}`)}>Update</button>
+                    <button onClick={deleteArticle}>Delete</button>
+                </div>
                 <h6>{selectedArticle.createdAt}</h6>
-                <p>{selectedArticle.content}</p>
-                <h6>{selectedArticle.category}</h6>
+                <p style={{ color: 'white', fontSize: '4vh' }}>{selectedArticle.content}</p>
+                <h4 style={{ color: 'white' }}>Category: {selectedArticle.category}</h4>
             </div>
-            <br /><br />
-            <button onClick={deleteArticle}>Delete</button>
-            <br /><br />
         </div>
     )
 }
