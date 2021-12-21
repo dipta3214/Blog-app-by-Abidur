@@ -56,7 +56,7 @@ const CreatePost = (props) => {
                     <h2>New Post:</h2>
                     <label for='title'>Title:</label>
                     <input type="text" value={newPost.title} id="title" placeholder="Enter Your title" onChange={(e) => handleChange(e)} required />
-                    <label for='image'>Image(Url Only):</label>
+                    <label for='image'>Image(URL Only):</label>
                     <input type="text" value={newPost.image} id="image" placeholder="Enter Image URL" onChange={(e) => handleChange(e)} required />
                     <label for='content'>Content:</label>
                     <textarea type="text" value={newPost.content} id="content" placeholder="Enter Your Content" onChange={(e) => handleChange(e)} required />
