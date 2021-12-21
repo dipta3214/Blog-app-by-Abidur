@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
+import Modal from "./Modal";
 
 const ArticleDetails = (props) => {
 
@@ -18,6 +19,15 @@ const ArticleDetails = (props) => {
         window.location.reload()
     }
 
+    const deleteArt = () => {
+        return (
+            <div>
+                {console.log('hello')}
+                <Modal></Modal>
+            </div>
+        )
+    }
+
     useEffect(() => {
         getArticleDetails()
     }, [])
@@ -28,7 +38,7 @@ const ArticleDetails = (props) => {
             <div className="article-details">
                 <div className="edit-delete">
                     <button onClick={() => props.history.push(`/articles/update/${selectedArticle._id}`)} style={{ margin: '1vh' }}><img src="https://img.icons8.com/ios-glyphs/30/000000/edit--v2.png" style={{ borderRadius: '5px' }} /></button>
-                    <button onClick={deleteArticle} style={{ margin: '1vh', padding: '1vh' }}><img src="https://img.icons8.com/material-sharp/24/000000/filled-trash.png" style={{ borderRadius: '5px' }} /></button>
+                    <button onClick={deleteArt} style={{ margin: '1vh', padding: '1vh' }}><img src="https://img.icons8.com/material-sharp/24/000000/filled-trash.png" style={{ borderRadius: '5px' }} /></button>
                 </div>
                 <h1 style={{ fontFamily: '"Trebuchet MS", Helvetica, sans-serif', color: 'white' }}>{selectedArticle.title}</h1>
                 <img src={selectedArticle.image} alt="bleh" className="details-image" />
