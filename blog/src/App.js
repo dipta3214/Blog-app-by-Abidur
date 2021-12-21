@@ -12,7 +12,6 @@ import Entertainment from './pages/Entertainment';
 import Sports from './pages/Sports';
 import Tech from './pages/Tech';
 import Investing from './pages/Investing';
-import Recent from './pages/Recent';
 
 
 function App() {
@@ -32,7 +31,6 @@ function App() {
             <Route path='/sports' component={Sports} />
             <Route path='/tech' component={Tech} />
             <Route path='/investing' component={Investing} />
-            <Route path='/recent' component={Recent} />
           </Switch>
         </div>
       </main>
