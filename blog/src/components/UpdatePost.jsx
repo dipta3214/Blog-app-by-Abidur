@@ -35,7 +35,15 @@ const UpdatePost = (props) => {
         setModalBoolean(true)
     }
 
-
+    const AfterPressingYes = () => {
+        axios.put(`http://localhost:3001/api/articles/${props.match.params.articleId}`, {
+            title: newPost.title,
+            image: newPost.image,
+            content: newPost.content,
+            category: newPost.category
+        })
+        setModalBoolean(false)
+    }
 
     const refuseUpdate = () => {
         setModalBoolean(false)
