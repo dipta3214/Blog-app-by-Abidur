@@ -76,7 +76,7 @@
   justify-content: space-between;
   align-items: center;
   height: 8vh;
-  background-color: #1c0b40;
+  background-color: #7d8a8c;
   width: 100%;
 }
 
@@ -88,13 +88,17 @@
 .SideBar{
   display: flex;
   justify-content: center;
-  background-color: #1c0b40;
+  background-color: #7d8a8c;
   text-align: center;
 }
 
+.sidebar :hover{
+  background-color: #356e67;
+}
+
 .content{
-  padding: 2vh;
-  background-color: #3b2a61;
+  padding: 3vh;
+  background-color: #d5edea;
 }
 
 .articleCard{
@@ -103,7 +107,7 @@
   padding: 1vh;
   text-align: center;
   color: white;
-  background-color: orange;
+  background-color: #356e67;
 }
 
 
@@ -158,8 +162,8 @@
   margin: 2vh;
   width: 10vh;
   height: 15vh;
-  background-color: orange;
-  border: 1px solid #b59207;
+  background-color: #52a399;
+  color: white;
   border-radius: 1vh;
 }
 
@@ -171,15 +175,14 @@
   padding: 1vh;
   width: 15vh;
   height: 7vh;
-  background-color: orange;
-  border: 1px solid #b59207;
+  background-color: #356e67;
   border-radius: 1vh;
+  color: white;
   font-family: Tahoma, Verdana, sans-serif;
 }
 
 .all-nav :hover{
-  background-color: palegoldenrod;
-  color: black;
+  background-color: #356e67;
 }
 
 .modal{
@@ -187,9 +190,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #1c0b40;
+  background-color: #7d8a8c;
   color: white;
-  border: 2px solid orange;
+  border: 2px solid white;
   border-radius: 1vh;
   padding: 50px;
   z-index: 1000;
@@ -200,8 +203,8 @@
   width: 10vh;
   margin: 2px;
   height: 7vh;
-  background-color: orange;
-  border: 1px solid #b59207;
+  background-color: #1f5e57;
+  color: white;
   border-radius: 1vh;
   font-family: Tahoma, Verdana, sans-serif;
 }
