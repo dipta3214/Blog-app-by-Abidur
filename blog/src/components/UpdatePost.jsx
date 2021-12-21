@@ -43,6 +43,8 @@ const UpdatePost = (props) => {
             category: newPost.category
         })
         setModalBoolean(false)
+        props.history.push(`/articles/${props.match.params.articleId}`)
+        window.location.reload()
     }
 
     const refuseUpdate = () => {
