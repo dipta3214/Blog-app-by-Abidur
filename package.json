@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "### This is a simple blog app where you can create a post, update it, delete it also categorize each post. This app was created using the MERN stack.",
   "main": "index.js",
+  "engines": {
+    "node": "17.x"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
