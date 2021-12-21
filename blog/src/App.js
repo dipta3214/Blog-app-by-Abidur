@@ -12,6 +12,8 @@ import Entertainment from './pages/Entertainment';
 import Sports from './pages/Sports';
 import Tech from './pages/Tech';
 import Investing from './pages/Investing';
+import About from './components/About';
+import Contact from './components/Contact';
 
 
 function App() {
@@ -31,6 +33,8 @@ function App() {
             <Route path='/sports' component={Sports} />
             <Route path='/tech' component={Tech} />
             <Route path='/investing' component={Investing} />
+            <Route path='/about' component={About} />
+            <Route path='/contact' component={Contact} />
           </Switch>
         </div>
       </main>
