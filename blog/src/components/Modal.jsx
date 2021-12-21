@@ -23,19 +23,17 @@ const Modal_styles = {
 }
 
 const Modal = (props) => {
-    // if (!props.open) {
-    //     return null
-    // }
-
-    console.log('hello')
+    if (!props.open) {
+        return null
+    }
 
     return ReactDOM.createPortal(
         <div>
             <div style={Overlay_styles} />
             <div style={Modal_styles}>
-                <h6>Are you sure?</h6>
-                <button onClick={props.onCancel}>Cancel</button>
-                <button>Yes</button>
+                <h6>{props.text}</h6>
+                {props.children}
+                <button onClick={props.onSubmit}>{props.okay}</button>
             </div>
         </div>,
         document.getElementById('portal')

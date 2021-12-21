@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import SuccesfulCreation from "./SuccessfulCreation";
+import Modal from "../components/Modal";
 
 const CreatePost = (props) => {
 
@@ -29,6 +30,8 @@ const CreatePost = (props) => {
         console.log(newPost)
     }
 
+    const [message, setMessage] = useState(false)
+
     const submitForm = (e) => {
         e.preventDefault()
         axios.post('http://localhost:3001/api/createArticle', {
@@ -40,12 +43,7 @@ const CreatePost = (props) => {
         })
 
         if (newPost.title !== '' && newPost.content !== '' && newPost.image !== '' && newPost.category !== '') {
-            return (
-                <div>
-                    {alert('done')}
-                    {console.log('done')}
-                </div>
-            )
+            setMessage(true)
         }
     }
 
@@ -53,6 +51,7 @@ const CreatePost = (props) => {
         <div className="form-div-div">
             <div className="form-div">
                 <form onSubmit={(e) => submitForm(e)} className="form">
+                    <SuccesfulCreation open={message} />
                     <h2>New Post:</h2>
                     <label for='title'>Title:</label>
                     <input type="text" value={newPost.title} id="title" placeholder="Enter Your title" onChange={(e) => handleChange(e)} required />

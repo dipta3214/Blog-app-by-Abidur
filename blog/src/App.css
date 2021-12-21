@@ -181,5 +181,7 @@
   color: black;
 }
 
-
+.modal{
+  visibility: hidden;
+}
 

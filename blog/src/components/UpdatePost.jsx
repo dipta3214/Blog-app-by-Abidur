@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Modal from "./Modal";
 
 const UpdatePost = (props) => {
 
@@ -17,7 +18,6 @@ const UpdatePost = (props) => {
     }, [])
 
 
-
     const [newPost, setNewPost] = useState({})
 
     console.log(newPost)
@@ -28,18 +28,25 @@ const UpdatePost = (props) => {
         setNewPost(newestPost)
     }
 
+    const [modalBoolean, setModalBoolean] = useState(false)
+
     const submitForm = (e) => {
         e.preventDefault()
-        axios.put(`http://localhost:3001/api/articles/${props.match.params.articleId}`, {
-            title: newPost.title,
-            image: newPost.image,
-            content: newPost.content,
-            category: newPost.category
-        })
+        setModalBoolean(true)
     }
+
+
+
+    const refuseUpdate = () => {
+        setModalBoolean(false)
+    }
+
+
+
 
     return (
         <div className="form-div-div">
+            <Modal open={modalBoolean} onSubmit={AfterPressingYes} text="Do you want to make the changes?" okay='Yes'><button onClick={refuseUpdate}>Cancel</button></Modal>
             <div className="form-div">
                 <form onSubmit={(e) => submitForm(e)} className="form">
                     <h2>Update Post:</h2>

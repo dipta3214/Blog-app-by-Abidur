@@ -1,6 +1,11 @@
 import React from "react";
 
-const SuccesfulCreation = () => {
+const SuccesfulCreation = (props) => {
+
+    if (!props.open) {
+        return null
+    }
+
     return (
         <div>
             <h2>Successfully created!!!</h2>
