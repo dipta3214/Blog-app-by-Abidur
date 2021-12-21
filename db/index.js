@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 mongoose
-    .connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/blogDatabase', { useUnifiedTopology: true, useNewUrlParser: true })
+    .connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/blogDatabase')
     .then(() => {
         console.log("Successfully connected to MongoDB")
     })

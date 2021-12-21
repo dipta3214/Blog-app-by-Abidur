@@ -7,7 +7,7 @@ const UpdatePost = (props) => {
     const [selectedArticle, setSelectedArticle] = useState({})
 
     const getArticleDetails = async () => {
-        const res = await axios.get(`http://localhost:3001/api/articles/update/${props.match.params.articleId}`)
+        const res = await axios.get(`/api/articles/update/${props.match.params.articleId}`)
         setSelectedArticle(res.data.article)
         setNewPost(res.data.article)
         console.log(res)
@@ -36,7 +36,7 @@ const UpdatePost = (props) => {
     }
 
     const AfterPressingYes = () => {
-        axios.put(`http://localhost:3001/api/articles/${props.match.params.articleId}`, {
+        axios.put(`/api/articles/${props.match.params.articleId}`, {
             title: newPost.title,
             image: newPost.image,
             content: newPost.content,

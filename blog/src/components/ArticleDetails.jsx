@@ -7,7 +7,7 @@ const ArticleDetails = (props) => {
     const [selectedArticle, setSelectedArticle] = useState({})
 
     const getArticleDetails = async () => {
-        const res = await axios.get(`http://localhost:3001/api/articles/${props.match.params.articleId}`)
+        const res = await axios.get(`/api/articles/${props.match.params.articleId}`)
         setSelectedArticle(res.data.article)
         // console.log(res)
     }
@@ -15,7 +15,7 @@ const ArticleDetails = (props) => {
     const [modalBoolean, setModalBoolean] = useState(false)
 
     const deleteArticle = () => {
-        axios.delete(`http://localhost:3001/api/articles/${props.match.params.articleId}`)
+        axios.delete(`/api/articles/${props.match.params.articleId}`)
         props.history.push('/')
         window.location.reload()
     }

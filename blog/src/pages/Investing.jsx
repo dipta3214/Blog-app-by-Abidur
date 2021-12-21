@@ -7,7 +7,7 @@ const Investing = (props) => {
     const [articles, setArticles] = useState([])
 
     const getArticles = async () => {
-        const res = await axios.get('http://localhost:3001/api/articles/')
+        const res = await axios.get('/api/articles/')
         setArticles(res.data.articles)
     }
 

@@ -9,7 +9,7 @@ const CreatePost = (props) => {
 
     useEffect(() => {
         const getUser = async () => {
-            const res = await axios.get('http://localhost:3001/api/users')
+            const res = await axios.get('/api/users')
             setUser(res.data.users[0])
         }
         getUser()
@@ -34,7 +34,7 @@ const CreatePost = (props) => {
 
     const submitForm = (e) => {
         e.preventDefault()
-        axios.post('http://localhost:3001/api/createArticle', {
+        axios.post('/api/createArticle', {
             title: newPost.title,
             content: newPost.content,
             image: newPost.image,
