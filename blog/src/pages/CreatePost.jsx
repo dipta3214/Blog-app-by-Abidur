@@ -49,9 +49,9 @@ const CreatePost = (props) => {
 
     return (
         <div className="form-div-div">
+            <SuccesfulCreation open={message} />
             <div className="form-div">
                 <form onSubmit={(e) => submitForm(e)} className="form">
-                    <SuccesfulCreation open={message} />
                     <h2>New Post:</h2>
                     <label for='title'>Title:</label>
                     <input type="text" value={newPost.title} id="title" placeholder="Enter Your title" onChange={(e) => handleChange(e)} required />

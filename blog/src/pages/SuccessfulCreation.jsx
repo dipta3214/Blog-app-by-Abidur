@@ -7,9 +7,12 @@ const SuccesfulCreation = (props) => {
     }
 
     return (
-        <div>
-            <h2>Successfully created!!!</h2>
-        </div>
+        <>
+            <div className="success-name">
+                <h2>Successfully created!!!</h2>
+            </div>
+            <br />
+        </>
     )
 }
 
