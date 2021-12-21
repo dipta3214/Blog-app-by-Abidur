@@ -10,7 +10,7 @@ const SuccesfulCreation = (props) => {
     return (
         <>
             <div className="success-name">
-                <h2>Successfully created!!! Refresh back to <Link to="/">Homepage</Link> to check!</h2>
+                <h2>Successfully created!!! Refresh back to <Link to="/">Homepage</Link> to check! </h2>
             </div>
             <br />
         </>
