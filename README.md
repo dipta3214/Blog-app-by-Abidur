@@ -1,6 +1,17 @@
 # Blog-app-by-Abidur
 
+![](https://imgur.com/a/Q0iuraR)
+
 ### This is a simple blog app where you can create a post, update it, delete it also categorize each post. This app was created using the MERN stack.
+
+## Getting Started
+- `Fork` and `Clone`
+- `cd` into Blog-app-by-abidur
+- `npm i`
+- `node seed/users.js`
+- `node seed/articles.js`
+- `cd` into client
+- `npm i`
 
 ## Technologies Used
 - React JS
