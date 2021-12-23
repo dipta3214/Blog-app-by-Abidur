@@ -61,7 +61,7 @@ const CreatePost = (props) => {
                     <textarea type="text" value={newPost.content} id="content" placeholder="Enter Your Content" onChange={(e) => handleChange(e)} required />
                     <label for='category'>Category:</label>
                     <input type="text" value={newPost.category} id="category" placeholder="Enter Category Name" onChange={(e) => handleChange(e)} required />
-                    <button type="submit">Submit</button>
+                    <button className="form-btn" type="submit">Submit</button>
                 </form>
             </div>
         </div>

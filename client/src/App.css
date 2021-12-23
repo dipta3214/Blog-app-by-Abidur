@@ -110,6 +110,10 @@
   background-color: #356e67;
 }
 
+.articleCard :hover{
+  opacity: 0.9;
+}
+
 
 
 .form-div-div{
@@ -168,6 +172,7 @@
   border-radius: 1vh;
 }
 
+
 .form h2{
   text-align: center;
 }
@@ -180,6 +185,10 @@
   border-radius: 1vh;
   color: white;
   font-family: Tahoma, Verdana, sans-serif;
+}
+
+.new-post-button :hover{
+  opacity: 0.9;
 }
 
 .all-nav :hover{
@@ -227,4 +236,32 @@
   width: 100vh;
   text-align: center;
   border-radius: 1vh;
+}
+
+.about{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(250, 240, 240);
+  border-radius: 2vh;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.contact{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(250, 240, 240);
+  border-radius: 2vh;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.socials{
+  display: flex;
+  justify-content: center;
+}
+
+.socials h2{
+  padding: 2vh;
 }
