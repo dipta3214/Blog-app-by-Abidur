@@ -21,10 +21,10 @@
 - CSS
 
 ## Hierarchy Diagram
-![](https://i.imgur.com/Ew0voy9.png)
+![](https://i.imgur.com/G51ZkJf.png)
 
 ## ERD 
-![](https://i.imgur.com/9zzWOyY.png)
+![](https://i.imgur.com/AVNJ5un.png)
 
 ## Trello board
 - [Trello](https://trello.com/b/BITt9mHP/blog-by-abidur)
@@ -32,3 +32,8 @@
 ## Creator's Social Media sites
 - [LinkedIn](https://www.linkedin.com/in/abidurrahmandipta/)
 - [GitHub](https://github.com/dipta3214)
+
+## Credits
+- [Creating-Modal](https://youtu.be/LyLa7dU5tp8)
+- [W3Schools](https://www.w3schools.com/)
+- [icons](https://icons8.com/)
