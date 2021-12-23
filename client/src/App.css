@@ -1,3 +1,7 @@
+/* body{
+  position: relative;
+} */
+
 .navbar, .sidebar{
   font-family: Tahoma, Verdana, sans-serif; 
 }

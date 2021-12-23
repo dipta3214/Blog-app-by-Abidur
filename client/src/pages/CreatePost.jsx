@@ -44,6 +44,14 @@ const CreatePost = (props) => {
 
         if (newPost.title !== '' && newPost.content !== '' && newPost.image !== '' && newPost.category !== '') {
             setMessage(true)
+            let afterSubmit = {
+                title: ``,
+                content: ``,
+                image: ``,
+                category: ``,
+                author_name: user.author
+            }
+            setNewPost(afterSubmit)
         }
     }
 
