@@ -1,6 +1,6 @@
 # Blog-app-by-Abidur
 
-![](https://imgur.com/a/Q0iuraR)
+![](https://i.imgur.com/Qt1TXKH.png)
 
 ### This is a simple blog app where you can create a post, update it, delete it also categorize each post. This app was created using the MERN stack.
 
