@@ -20,7 +20,7 @@
 - MongoDB
 - CSS
 
-## Deployed Link
+## 🚀 Deployed Link
 - [Heroku](http://blog-app-by-abidur.herokuapp.com/)
 
 ## Hierarchy Diagram
