@@ -33,7 +33,7 @@
 - [Trello](https://trello.com/b/BITt9mHP/blog-by-abidur)
 
 ## 🛠 Built By
-Christopher Bowers | [LinkedIn](https://www.linkedin.com/in/abidurrahmandipta/) | [GitHub](https://github.com/dipta3214)
+Abidur Rahman Dipta | [LinkedIn](https://www.linkedin.com/in/abidurrahmandipta/) | [GitHub](https://github.com/dipta3214)
 
 ## Credits
 - [Creating-Modal](https://youtu.be/LyLa7dU5tp8)
