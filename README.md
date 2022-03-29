@@ -13,7 +13,7 @@
 - `cd` into client
 - `npm i`
 
-## Technologies Used
+## 💻 Built With
 - React JS
 - Node JS
 - Express JS
