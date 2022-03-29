@@ -32,9 +32,8 @@
 ## Trello board
 - [Trello](https://trello.com/b/BITt9mHP/blog-by-abidur)
 
-## Creator's Social Media sites
-- [LinkedIn](https://www.linkedin.com/in/abidurrahmandipta/)
-- [GitHub](https://github.com/dipta3214)
+## 🛠 Built By
+Christopher Bowers | [LinkedIn](https://www.linkedin.com/in/abidurrahmandipta/) | [GitHub](https://github.com/dipta3214)
 
 ## Credits
 - [Creating-Modal](https://youtu.be/LyLa7dU5tp8)
