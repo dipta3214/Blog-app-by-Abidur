@@ -14,6 +14,7 @@ import Tech from './pages/Tech';
 import Investing from './pages/Investing';
 import About from './components/About';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
           </Switch>
         </div>
       </main>
+      <Footer />
     </div>
   );
 }

@@ -269,3 +269,31 @@
 .socials h2{
   padding: 2vh;
 }
+
+/* Footer */
+
+.footer{
+  background-color: #fc7903;
+  height: 300px;
+}
+
+.footer-content{
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 10%;
+}
+
+.footer-content div nav a{
+  color: black;
+  background-color: white;
+  margin: 5px;
+  padding: 12px;
+  border-radius: 50%;
+}
+
+.footer-credits{
+  color: white;
+  font-family: 'Roboto Slab', serif;
+}
