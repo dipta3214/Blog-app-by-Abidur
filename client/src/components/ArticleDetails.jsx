@@ -64,8 +64,7 @@ const ArticleDetails = (props) => {
         </div>
         <h1
           style={{
-            fontFamily: '"Trebuchet MS", Helvetica, sans-serif',
-            color: 'black'
+            fontFamily: '"Trebuchet MS", Helvetica, sans-serif'
           }}
         >
           {selectedArticle.title}
@@ -73,10 +72,8 @@ const ArticleDetails = (props) => {
         <img src={selectedArticle.image} alt="bleh" className="details-image" />
         <h2>Author: {selectedArticle.author_name}</h2>
         <h6>{selectedArticle.createdAt}</h6>
-        <h4 style={{ color: 'black' }}>Category: {selectedArticle.category}</h4>
-        <p style={{ color: 'black', fontSize: '4vh' }}>
-          {selectedArticle.content}
-        </p>
+        <h4>Category: {selectedArticle.category}</h4>
+        <p style={{ fontSize: '4vh' }}>{selectedArticle.content}</p>
       </div>
     </div>
   );
