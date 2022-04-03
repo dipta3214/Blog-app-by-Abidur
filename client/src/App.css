@@ -2,6 +2,12 @@
   position: relative;
 } */
 
+/* Body */
+
+body{
+  background-color: black;
+}
+
 .navbar, .sidebar{
   font-family: Tahoma, Verdana, sans-serif; 
 }
@@ -96,13 +102,9 @@
   text-align: center;
 }
 
-.sidebar :hover{
-  background-color: #356e67;
-}
-
 .content{
   padding: 3vh;
-  background-color: #d5edea;
+  background-color: #000000;
 }
 
 .articleCard{

@@ -31,7 +31,7 @@ const Header = () => {
   };
 
   const handleFailure = (result) => {
-    alert(result);
+    alert(result.error);
   };
 
   return (
