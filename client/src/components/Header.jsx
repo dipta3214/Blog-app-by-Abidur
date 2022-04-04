@@ -35,50 +35,52 @@ const Header = () => {
   };
 
   return (
-    <div className="navbar">
-      <div className="all-nav">
-        <Link
-          to="/"
-          className="nav-item"
-          style={{ color: 'white', textDecoration: 'none', padding: '2vh' }}
-        >
-          <h4>Home</h4>
-        </Link>
-        <Link
-          to="/about"
-          className="nav-item"
-          style={{ color: 'white', textDecoration: 'none', padding: '2vh' }}
-        >
-          <h4>About</h4>
-        </Link>
-        <Link
-          to="contact"
-          className="nav-item"
-          style={{ color: 'white', textDecoration: 'none', padding: '2vh' }}
-        >
-          <h4>Contact</h4>
-        </Link>
-      </div>
-      <div className="new-post-button">
-        {loginData ? (
-          <div>
-            <button onClick={handleLogout}>Logout</button>
-          </div>
-        ) : (
-          <GoogleLogin
-            clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
-            buttonText="Login with Google"
-            cookiePolicy={'single_host_origin'}
-            onSuccess={handleLogin}
-            onFailure={handleFailure}
-          ></GoogleLogin>
-        )}
-        <Link
-          to="/createpost"
-          style={{ color: 'white', textDecoration: 'none', padding: '2vh' }}
-        >
-          <button className="btn-new-post">New Post</button>
-        </Link>
+    <div className="nav-main">
+      <div className="navbar">
+        <div className="all-nav">
+          <Link
+            to="/"
+            className="nav-item"
+            style={{ color: 'white', textDecoration: 'none', padding: '2vh' }}
+          >
+            <h4>Home</h4>
+          </Link>
+          <Link
+            to="/about"
+            className="nav-item"
+            style={{ color: 'white', textDecoration: 'none', padding: '2vh' }}
+          >
+            <h4>About</h4>
+          </Link>
+          <Link
+            to="contact"
+            className="nav-item"
+            style={{ color: 'white', textDecoration: 'none', padding: '2vh' }}
+          >
+            <h4>Contact</h4>
+          </Link>
+        </div>
+        <div className="new-post-button">
+          {loginData ? (
+            <div>
+              <button onClick={handleLogout}>Logout</button>
+            </div>
+          ) : (
+            <GoogleLogin
+              clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
+              buttonText="Login with Google"
+              cookiePolicy={'single_host_origin'}
+              onSuccess={handleLogin}
+              onFailure={handleFailure}
+            ></GoogleLogin>
+          )}
+          <Link
+            to="/createpost"
+            style={{ color: 'white', textDecoration: 'none', padding: '2vh' }}
+          >
+            <button className="btn-new-post">New Post</button>
+          </Link>
+        </div>
       </div>
     </div>
   );

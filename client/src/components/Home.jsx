@@ -19,21 +19,23 @@ const Home = (props) => {
   }, []);
 
   return (
-    <div className="home">
-      {articles.map((article) => {
-        let timestamp = Date.parse(article.createdAt);
-        let time = new Date(timestamp);
-        return (
-          <div className="articleCard" key={article._id}>
-            <ArticleCard
-              image={article.image}
-              date={`${time.getMonth()}/${time.getDate()}/${time.getFullYear()}`}
-              title={`${article.title}`}
-              onClick={() => props.history.push(`articles/${article._id}`)}
-            />
-          </div>
-        );
-      })}
+    <div className="main-home">
+      <div className="home">
+        {articles.map((article) => {
+          let timestamp = Date.parse(article.createdAt);
+          let time = new Date(timestamp);
+          return (
+            <div className="articleCard" key={article._id}>
+              <ArticleCard
+                image={article.image}
+                date={`${time.getMonth()}/${time.getDate()}/${time.getFullYear()}`}
+                title={`${article.title}`}
+                onClick={() => props.history.push(`articles/${article._id}`)}
+              />
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
