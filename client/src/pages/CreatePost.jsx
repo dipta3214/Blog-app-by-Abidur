@@ -63,8 +63,8 @@ const CreatePost = (props) => {
     <div className="form-div-div">
       <SuccesfulCreation open={message} />
       <div className="form-div h-100">
-        <h2>New Post:</h2>
         <form onSubmit={(e) => submitForm(e)} className="form">
+          <h2>New Post:</h2>
           <div className="form-child">
             <label htmlFor="title">Title:</label>
             <input
