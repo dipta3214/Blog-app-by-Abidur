@@ -96,7 +96,7 @@ const CreatePost = (props) => {
               type="text"
               value={newPost.content}
               id="content"
-              className="inputForm"
+              className="inputForm textArea"
               placeholder="Enter Your Content"
               onChange={(e) => handleChange(e)}
               required
