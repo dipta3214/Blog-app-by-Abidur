@@ -23,10 +23,14 @@ const Header = () => {
     const data = await res.json();
     setLoginData(data);
     localStorage.setItem('loginData', JSON.stringify(data));
+    localStorage.setItem('authentication', 'true');
+
+    window.location.reload();
   };
 
   const handleLogout = () => {
     localStorage.removeItem('loginData');
+    localStorage.removeItem('authentication');
     setLoginData(null);
   };
 
@@ -74,12 +78,14 @@ const Header = () => {
               onFailure={handleFailure}
             ></GoogleLogin>
           )}
-          <Link
-            to="/createpost"
-            style={{ color: 'white', textDecoration: 'none', padding: '2vh' }}
-          >
-            <button className="btn-new-post">New Post</button>
-          </Link>
+          {localStorage.getItem('authentication') && (
+            <Link
+              to="/createpost"
+              style={{ color: 'white', textDecoration: 'none', padding: '2vh' }}
+            >
+              <button className="btn-new-post">New Post</button>
+            </Link>
+          )}
         </div>
       </div>
     </div>
