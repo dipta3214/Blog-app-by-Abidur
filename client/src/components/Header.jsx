@@ -10,7 +10,7 @@ const Header = () => {
   );
 
   const handleLogin = async (googleData) => {
-    const res = await fetch('api/google-login', {
+    const res = await fetch('/api/google-login', {
       method: 'POST',
       body: JSON.stringify({
         token: googleData.tokenId
