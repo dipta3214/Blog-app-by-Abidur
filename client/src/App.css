@@ -38,6 +38,7 @@ body{
 
 .articleCard{
   font-family: 'Nunito', sans-serif;
+  cursor: pointer;
 }
 
 .passthrough-link:after {
