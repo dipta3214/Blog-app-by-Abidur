@@ -39,15 +39,22 @@ const Header = () => {
   };
 
   return (
-    <div className="nav-main">
-      <div className="navbar">
-        <div className="all-nav">
+    <nav className="navbar">
+      <a href="#" className="logo">
+        LOGO
+      </a>
+      <input type="checkbox" id="toggler" />
+      <label htmlFor="toggler">
+        <i className="ri-menu-line"></i>
+      </label>
+      <div className="menu">
+        <ul className="list">
           <Link
             to="/"
             className="nav-item"
             style={{ color: 'white', textDecoration: 'none', padding: '2vh' }}
           >
-            <h4>Home</h4>
+            Home
           </Link>
           <Link
             to="/about"
@@ -63,12 +70,14 @@ const Header = () => {
           >
             <h4>Contact</h4>
           </Link>
-        </div>
-        <div className="new-post-button">
+
+          {/* <div className="new-post-button"> */}
           {loginData ? (
-            <div>
-              <button onClick={handleLogout}>Logout</button>
-            </div>
+            <Link
+              style={{ color: 'white', textDecoration: 'none', padding: '2vh' }}
+            >
+              <h4 onClick={handleLogout}>Logout</h4>
+            </Link>
           ) : (
             <GoogleLogin
               clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
@@ -81,14 +90,19 @@ const Header = () => {
           {localStorage.getItem('authentication') && (
             <Link
               to="/createpost"
-              style={{ color: 'white', textDecoration: 'none', padding: '2vh' }}
+              style={{
+                color: 'white',
+                textDecoration: 'none',
+                padding: '2vh'
+              }}
             >
               <button className="btn-new-post">New Post</button>
             </Link>
           )}
-        </div>
+          {/* </div> */}
+        </ul>
       </div>
-    </div>
+    </nav>
   );
 };
 
